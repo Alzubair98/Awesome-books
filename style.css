@@ -5,7 +5,41 @@
   margin: 1rem 0 1rem 0;
 }
 
+.remove-btn {
+  height: 30px;
+  border-radius: 10px;
+  border: 3px;
+  margin-top: 20px;
+  position: absolute;
+  right: 5%;
+}
+
+.books-section {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+.books-section > div:nth-of-type(even) {
+  background-color: beige;
+}
+
+.title-author {
+  margin-left: 2%;
+}
+
 .book-div {
   display: flex;
+  flex-direction: row;
+}
+
+.add-books-section {
+  display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.add-button {
+  margin-left: 77%;
 }
