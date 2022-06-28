@@ -52,7 +52,9 @@ class Books {
   }
 
   static createHTML = () => {
-    newbook.forEach(createBook);
+    newbook.forEach((book) => {
+      this.createBook(book.title, book.author);
+    });
   }
   
   static addEventListeners = () => {
@@ -66,6 +68,8 @@ class Books {
         titleField.value ='';
         authorField.value = '';
     });
+
+    this.createHTML();
   }
   
   
