@@ -11,36 +11,36 @@ const newbook = JSON.parse(localStorage.getItem('books')) || [];
 
 class Books {
     static addNewBook = (title, author) => {
-    newbook.push(
-      {
-        title,
-        author,
-      },
-    );
+      newbook.push(
+        {
+          title,
+          author,
+        },
+      );
 
-    localStorage.setItem('books', JSON.stringify(newbook));
+      localStorage.setItem('books', JSON.stringify(newbook));
 
-    return {title, author};
-  }
+      return { title, author };
+    }
 
-  static localStorageBooks() {
-    return JSON.parse(localStorage.getItem('books'));
-  }
+    static localStorageBooks() {
+      return JSON.parse(localStorage.getItem('books'));
+    }
 
-  static getbook() {
-    return this.localStorageBooks();
-  }
+    static getbook() {
+      return this.localStorageBooks();
+    }
 
   static createBook = (book, index) => {
     const divforbook = document.createElement('div');
     const bookName = document.createElement('h2');
     const bookAuthor = document.createElement('h2');
     const removeButton = document.createElement('button');
-  
-    //adding classes to items 
-    bookName.classList.add("title-author");
-    bookAuthor.classList.add("title-author");
-    removeButton.classList.add("remove-btn");
+
+    // adding classes to items
+    bookName.classList.add('title-author');
+    bookAuthor.classList.add('title-author');
+    removeButton.classList.add('remove-btn');
     divforbook.classList.add('book-div');
 
     // elements contects
@@ -62,29 +62,25 @@ class Books {
   static createHTML = () => {
     const thebooks = Books.getbook();
 
-    if (thebooks !== null){
+    if (thebooks !== null) {
       thebooks.forEach((book) => Books.createBook(book));
     }
   };
 
-  
   static addEventListeners = () => {
-      buttonAdd.addEventListener('click', (e)=>{
-        e.preventDefault();
-    
-        const thenewbook = this.addNewBook(titleField.value,authorField.value);
-    
-        this.createBook(thenewbook);
-    
-        titleField.value ='';
-        authorField.value = '';
+    buttonAdd.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const thenewbook = this.addNewBook(titleField.value, authorField.value);
+
+      this.createBook(thenewbook);
+
+      titleField.value = '';
+      authorField.value = '';
     });
 
     this.createHTML();
   }
-  
-};
+}
 
 Books.addEventListeners();
-
-
