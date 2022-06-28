@@ -3,3 +3,8 @@
     display: block;
     margin: 1rem 0 1rem 0;
 }
+
+.book-div{
+    display: flex;
+    flex-direction: column;
+}
