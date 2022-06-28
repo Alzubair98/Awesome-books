@@ -20,10 +20,18 @@ class Books {
 
     localStorage.setItem('books', JSON.stringify(newbook));
 
-    return { title, author };
+    return {title, author};
   }
 
-  static createBook = ({ title, author }, index) => {
+  static localStorageBooks() {
+    return JSON.parse(localStorage.getItem('books'));
+  }
+
+  static getbook() {
+    return this.localStorageBooks();
+  }
+
+  static createBook = (book, index) => {
     const divforbook = document.createElement('div');
     const bookName = document.createElement('h2');
     const bookAuthor = document.createElement('h2');
@@ -32,13 +40,13 @@ class Books {
     //adding classes to items 
     bookName.classList.add("title-author");
     bookAuthor.classList.add("title-author");
-    removeButton.classList.add("remove-btn")
-
+    removeButton.classList.add("remove-btn");
     divforbook.classList.add('book-div');
+
     // elements contects
     removeButton.innerHTML = 'Remove';
-    bookName.innerHTML = title;
-    bookAuthor.innerHTML = author;
+    bookName.innerHTML = book.title;
+    bookAuthor.innerHTML = book.author;
 
     removeButton.addEventListener('click', (event) => {
       event.target.parentElement.remove();
@@ -49,13 +57,16 @@ class Books {
     divforbook.append(bookName, bookAuthor, removeButton);
 
     booksContiner.appendChild(divforbook);
-  }
+  };
 
   static createHTML = () => {
-    newbook.forEach((book) => {
-      this.createBook(book.title, book.author);
-    });
-  }
+    const thebooks = Books.getbook();
+
+    if (thebooks !== null){
+      thebooks.forEach((book) => Books.createBook(book));
+    }
+  };
+
   
   static addEventListeners = () => {
       buttonAdd.addEventListener('click', (e)=>{
@@ -72,42 +83,8 @@ class Books {
     this.createHTML();
   }
   
-  
-
-
-
-
-
-
-
-
-
-
-  // static theForm.onsubmit = (event) => {
-  //   event.preventDefault();
-
-  //   const thenewbook = addNewBook(titleField.value, authorField.value);
-
-  //   createBook(thenewbook);
 };
 
 Books.addEventListeners();
-
-
-
-// another way of adding books
-
-// const buttonAdd = document.querySelector('.add-button');
-
-// buttonAdd.addEventListener('click', (e)=>{
-//     e.preventDefault();
-
-//     const thenewbook = addNewBook(titleField.value,authorField.value);
-
-//     createBook(thenewbook);
-
-//     titleField.value ='';
-//     authorField.value = '';
-// });
 
 

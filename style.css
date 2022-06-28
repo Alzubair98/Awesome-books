@@ -5,7 +5,6 @@
   margin: 1rem 0 1rem 0;
 }
 
-
 .title-author{
   margin-right: 10px;
 }
@@ -18,7 +17,11 @@
   position: fixed;
   right: 2%;
 }
-
+.books-section{
+border-width: 2px;
+border-color: black;
+border-style: solid;
+}
 .books-section :nth-child(even) {
   background-color: beige;
 }
@@ -26,10 +29,6 @@
 .book-div {
   display: flex;
   flex-direction: row;
-  border-color: black;
-  border-width: 3px;
-  border-style: solid;
-  background-color: white;
 }
 
 .add-books-section{
