@@ -5,10 +5,6 @@
   margin: 1rem 0 1rem 0;
 }
 
-.title-author{
-  margin-right: 10px;
-}
-
 .remove-btn{
   height: 30px;
   border-radius: 10px;
@@ -17,13 +13,19 @@
   position: fixed;
   right: 2%;
 }
+
 .books-section{
 border-width: 2px;
 border-color: black;
 border-style: solid;
 }
-.books-section :nth-child(even) {
+
+.books-section > div:nth-of-type(even) {
   background-color: beige;
+}
+
+.title-author{
+  margin-right: 10px;
 }
 
 .book-div {
