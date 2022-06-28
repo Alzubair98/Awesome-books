@@ -5,7 +5,35 @@
   margin: 1rem 0 1rem 0;
 }
 
+
+.title-author{
+  margin-right: 10px;
+}
+
+.remove-btn{
+  height: 30px;
+  border-radius: 10px;
+  border: 3px;
+  margin-top: 20px;
+  position: relative;
+  left: 80%;
+}
+
 .book-div {
   display: flex;
+  flex-direction: row;
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.add-books-section{
+  display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.add-button{
+  margin-left: 77%;
 }

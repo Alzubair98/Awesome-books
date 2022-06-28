@@ -25,7 +25,11 @@ function createBook({ title, author }, index) {
   const bookName = document.createElement('h2');
   const bookAuthor = document.createElement('h2');
   const removeButton = document.createElement('button');
-  const hr = document.createElement('hr');
+ 
+  //adding classes to items 
+  bookName.classList.add("title-author");
+  bookAuthor.classList.add("title-author");
+  removeButton.classList.add("remove-btn")
 
   divforbook.classList.add('book-div');
   // elements contects
@@ -39,7 +43,7 @@ function createBook({ title, author }, index) {
     localStorage.setItem('books', JSON.stringify(newbook));
   });
 
-  divforbook.append(bookName, bookAuthor, removeButton, hr);
+  divforbook.append(bookName, bookAuthor, removeButton);
 
   booksContiner.appendChild(divforbook);
 }
@@ -68,3 +72,5 @@ theForm.onsubmit = (event) => {
 //     titleField.value ='';
 //     authorField.value = '';
 // });
+
+
