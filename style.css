@@ -1,10 +1,11 @@
 
-.title-fild ,.author-fild{
-    display: block;
-    margin: 1rem 0 1rem 0;
+.title-fild,
+.author-fild {
+  display: block;
+  margin: 1rem 0 1rem 0;
 }
 
-.book-div{
-    display: flex;
-    flex-direction: column;
+.book-div {
+  display: flex;
+  flex-direction: column;
 }
