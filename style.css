@@ -1,8 +1,24 @@
+body {
+  min-height: 100vh;
+}
+
+section {
+  min-height: 80%;
+}
 
 .title-fild,
 .author-fild {
   display: block;
   margin: 1rem 0 1rem 0;
+  width: 97%;
+}
+
+.input-form {
+  width: 24%;
+}
+
+.add-books-section h2 {
+  font-size: 3rem;
 }
 
 /* list-books-section */
@@ -46,10 +62,12 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
+  padding-top: 10%;
+  height: 65vh;
 }
 
 .add-button {
-  margin-left: 77%;
+  margin-left: 85%;
 }
 
 .nav-bar {
@@ -94,6 +112,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 10%;
+  height: 65vh;
+}
+
+.contact-info h1 {
+  font-size: 3rem;
 }
 
 .table-of-contact {
@@ -105,4 +129,11 @@
   border-style: solid;
   padding-left: 10px;
   margin-top: 2%;
+  width: 99%;
+  position: inherit;
+  bottom: 2%;
+}
+
+.hide {
+  display: none;
 }
