@@ -5,6 +5,14 @@
   margin: 1rem 0 1rem 0;
 }
 
+/* list-books-section */
+
+.list-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .remove-btn {
   height: 30px;
   border-radius: 10px;
@@ -42,4 +50,59 @@
 
 .add-button {
   margin-left: 77%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  border-width: 3px;
+  border-style: solid;
+  padding: 1%;
+}
+
+.nav-bar-title {
+  display: flex;
+  height: 20%;
+}
+
+.nav-bar-awsome {
+  margin: 0;
+}
+
+.options {
+  display: flex;
+  gap: 2%;
+  width: 30%;
+  align-items: center;
+  height: 20%;
+}
+
+.options-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.options-navs {
+  height: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* contact-section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-of-contact {
+  margin-right: 10%;
+}
+
+/* footer */
+.footer-section {
+  border-style: solid;
+  padding-left: 10px;
+  margin-top: 2%;
 }

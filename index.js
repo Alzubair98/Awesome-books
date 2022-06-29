@@ -84,3 +84,7 @@ class Books {
 }
 
 Books.addEventListeners();
+
+// const listButton = document.querySelector('.nav-list');
+// const addButton = document.querySelector('.nav-add');
+// const contactButton = document.querySelector('.nav-contant');
