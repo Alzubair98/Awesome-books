@@ -1,9 +1,9 @@
-
 # Project Name
+
 Awsome books
 
 > Description the project.
-adding books daynamiclly 
+> adding books daynamiclly
 
 ## Built With
 
@@ -13,7 +13,7 @@ adding books daynamiclly
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://alzubair98.github.io/code-review/)
+[Live Demo Link](https://alzubair98.github.io/Awesome-books/)
 
 To get a local copy up and running follow these simple example steps.
 
@@ -25,8 +25,9 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: https://twitter.com/FitZubair
 - LinkedIn: https://www.linkedin.com/in/alzubair-alqaraghuli-272918233/
 
-👤 **Author2**
- - GitHub: https://github.com/lucabenaventew
+👤 **Lucas**
+
+- GitHub: https://github.com/lucas-crodrigues
 
 ## 🤝 Contributing
 
